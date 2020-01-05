@@ -39,7 +39,8 @@ class Topic extends Model
         return route('topics.show', array_merge([$this->id, $this->slug], $params));
     }
     //关联回复模型
-    public function replies(){
-        $this->hanMany(Reply::class);
+    public function replies()
+    {
+        return $this->hasMany(Reply::class);
     }
 }
